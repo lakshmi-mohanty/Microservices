@@ -31,7 +31,7 @@ def health():
     return 'ok'
 
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def predict():
     feature_dict = request.get_json()
     if not feature_dict:
